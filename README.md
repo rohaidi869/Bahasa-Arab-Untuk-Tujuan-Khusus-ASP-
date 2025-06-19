@@ -1,2 +1,2 @@
 # Bahasa-Arab-Untuk-Tujuan-Khusus-ASP-
-Blog mudah statik
+ASP Mastery: Arab Fungsional untuk Kerjaya & Industri
