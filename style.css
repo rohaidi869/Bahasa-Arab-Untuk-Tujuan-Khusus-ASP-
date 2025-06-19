@@ -1,37 +1,99 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #fafafa;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #e0f2f1 0%, #fff 100%);
   color: #222;
-  max-width: 700px;
-  margin: auto;
+  max-width: 800px;
+  margin: 32px auto;
   padding: 24px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+  border-radius: 12px;
 }
-h1, h2 {
-  color: #007acc;
-}
+
 nav.main-menu ul {
   list-style: none;
   padding: 0;
   display: flex;
   gap: 24px;
   margin-bottom: 20px;
+  background: #007acc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
+nav.main-menu li {
+  margin: 0;
+}
+
 nav.main-menu a {
   text-decoration: none;
-  color: #007acc;
+  color: #fff;
   font-weight: bold;
+  padding: 12px 18px;
+  display: block;
+  border-radius: 8px;
+  transition: background 0.2s;
 }
+
+nav.main-menu a:hover {
+  background: #005fa3;
+}
+
+h1, h2 {
+  color: #007acc;
+}
+
 .search-bar {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
 }
+.search-bar input[type="text"] {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 220px;
+  transition: border 0.2s;
+}
+.search-bar input[type="text"]:focus {
+  border: 1.5px solid #007acc;
+  outline: none;
+}
+.search-bar button {
+  padding: 10px 18px;
+  background: #007acc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.search-bar button:hover {
+  background: #005fa3;
+}
+
 .breadcrumb {
   font-size: 0.95em;
   margin-bottom: 20px;
   color: #666;
 }
+
+.article-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  transition: box-shadow 0.2s;
+}
+.article-card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.13);
+}
+
 .related-articles {
   margin-top: 40px;
-  padding: 12px;
+  padding: 16px;
   background: #f3f3f3;
   border-radius: 6px;
 }
@@ -46,13 +108,6 @@ nav.main-menu a {
   padding: 2px 8px;
   font-size: 0.90em;
   margin-right: 4px;
-}
-.article-card {
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 6px;
-  margin-bottom: 20px;
-  padding: 18px;
 }
 .meta {
   color: #999;
