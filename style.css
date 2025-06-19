@@ -19,6 +19,31 @@ nav.main-menu ul {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: #fff;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px 16px;
+  text-align: left;
+}
+
+th {
+  background: #007acc;
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background: #f1f7fa;
+}
+
+tr:hover {
+  background: #e0f2f1;
+}
 
 nav.main-menu li {
   margin: 0;
