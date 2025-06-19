@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <title>Artikel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul class="main-menu">
+      <li><a href="index.html">Utama</a></li>
+      <li><a href="about.html">Tentang</a></li>
+      <li><a href="services.html">Perkhidmatan</a></li>
+      <li><a href="categories.html">Kategori</a></li>
+      <li><a href="contact.html">Hubungi</a></li>
+    </ul>
+  </nav>
+  <div id="breadcrumb"></div>
+  <div id="article-content"></div>
+  <script src="articles.js"></script>
+  <script>
+    function getQueryParam(name) {
+      const url = new URL(window.location.href);
+      return url.searchParams.get(name);
+    }
+    const articleId = getQueryParam('id');
+    const article = articles.find(a => a.id === articleId);
+    if (article) {
+      document.title = article.title;
+      document.getElementById('breadcrumb').innerHTML =
+        `<nav class="breadcrumb"><a href="index.html">Utama</a> &gt; <a href="categories.html">${article.category}</a> &gt; <span>${article.title}</span></nav>`;
+      document.getElementById('article-content').innerHTML = `
+        <h1>${article.title}</h1>
+        <div class="meta">${article.date} | ${article.category} | Tag: ${article.tags.map(t=>`<span class="tag">${t}</span>`).join(' ')}</div>
+        ${article.content}
+        <div class="related-articles">
+          <h3>Artikel Berkaitan</h3>
+          <ul>
+            ${articles.filter(a => a.category === article.category && a.id !== article.id)
+              .slice(0, 2)
+              .map(a => `<li><a href="post.html?id=${a.id}">${a.title}</a></li>`).join('')}
+          </ul>
+        </div>
+        <div class="next-article">
+          ${(() => {
+            const idx = articles.findIndex(a => a.id === article.id);
+            if (idx < articles.length - 1) {
+              const next = articles[idx + 1];
+              return `<a href="post.html?id=${next.id}">Artikel Seterusnya →</a>`;
+            }
+            return "";
+          })()}
+        </div>
+      `;
+    } else {
+      document.getElementById('article-content').innerHTML = "<p>Artikel tidak dijumpai.</p>";
+    }
+  </script>
+</body>
+</html>
