@@ -1,7 +1,7 @@
 const articles = [
   {
-    id: "tips-belajar-arab",
-    title: "Tips Belajar Bahasa Arab",
+    id: "Bahasa Arab Untuk Tujuan Khusus: Satu Pengenalan",
+    title: "Bahasa Arab Untuk Tujuan Khusus: Satu Pengenalan",
     date: "2025-06-19",
     category: "Pendidikan",
     tags: ["Bahasa", "Pembelajaran"],
