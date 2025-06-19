@@ -6,8 +6,43 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navbar -->
+  <nav>
+    <ul class="main-menu">
+      <li><a href="index.html">Utama</a></li>
+      <li><a href="about.html">Tentang</a></li>
+      <li><a href="services.html">Perkhidmatan</a></li>
+      <li><a href="categories.html">Kategori</a></li>
+      <li><a href="contact.html">Hubungi</a></li>
+    </ul>
+  </nav>
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb">
+    <a href="index.html">Utama</a> &gt; 
+    <a href="categories.html">Kategori</a> &gt; 
+    <a href="category-pendidikan.html">Pendidikan</a> &gt; 
+    <span>Cara Membina Blog Mudah</span>
+  </nav>
+  <!-- Bar Carian -->
+  <form id="searchForm" action="search.html" method="get" class="search-bar">
+    <input type="text" name="q" placeholder="Cari artikel..." />
+    <button type="submit">Cari</button>
+  </form>
+  <!-- Kandungan Post -->
   <h1>Cara Membina Blog Mudah</h1>
   <p>Ini adalah post pertama dalam blog mudah anda. Anda boleh tambah kandungan di sini.</p>
-  <a href="index.html">← Kembali ke Bahasa Arab Untuk Tujuan Khusus (ASP)</a>
+  <p><strong>Tag:</strong> <span class="tag">Pendidikan</span>, <span class="tag">Blog</span></p>
+  <!-- Artikel Berkaitan -->
+  <div class="related-articles">
+    <h3>Artikel Berkaitan</h3>
+    <ul>
+      <li><a href="post2.html">Belajar Bahasa Arab Dengan Mudah</a></li>
+      <li><a href="post3.html">Tips Menulis Artikel ASP</a></li>
+    </ul>
+  </div>
+  <!-- Artikel Seterusnya -->
+  <div class="next-article">
+    <a href="post2.html">Artikel Seterusnya →</a>
+  </div>
 </body>
 </html>
