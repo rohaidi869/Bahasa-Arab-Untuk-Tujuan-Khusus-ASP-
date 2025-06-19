@@ -6,10 +6,43 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <nav>
+    <ul class="main-menu">
+      <li><a href="index.html">Utama</a></li>
+      <li><a href="about.html">Tentang</a></li>
+      <li><a href="services.html">Perkhidmatan</a></li>
+      <li><a href="categories.html">Kategori</a></li>
+      <li><a href="contact.html">Hubungi</a></li>
+    </ul>
+  </nav>
   <h1>Bahasa Arab Untuk Tujuan Khusus (ASP)</h1>
-  <ul>
-    <li><a href="post1.html">Bahasa Arab Untuk Tujuan Khusus : Satu Pengenalan</a></li>
-    <li><a href="post2.html">Post Kedua Saya</a></li>
-  </ul>
+  <form id="searchForm" class="search-bar">
+    <input type="text" id="searchInput" placeholder="Cari artikel..." />
+  </form>
+  <div id="articles-list"></div>
+  <script src="articles.js"></script>
+  <script>
+    function renderArticles(filter = "") {
+      const list = document.getElementById('articles-list');
+      let filtered = articles;
+      if (filter) {
+        filtered = articles.filter(a => 
+          a.title.toLowerCase().includes(filter.toLowerCase())
+          || a.content.toLowerCase().includes(filter.toLowerCase())
+        );
+      }
+      list.innerHTML = filtered.map(article => `
+        <div class="article-card">
+          <h2><a href="post.html?id=${article.id}">${article.title}</a></h2>
+          <div class="meta">${article.date} | ${article.category}</div>
+          <div>${article.content.substring(0, 100)}...</div>
+        </div>
+      `).join('') || "<p>Tiada artikel dijumpai.</p>";
+    }
+    renderArticles();
+    document.getElementById('searchInput').addEventListener('input', e => {
+      renderArticles(e.target.value);
+    });
+  </script>
 </body>
 </html>
