@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Diri - Rohaidi bin Habil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        .section-content {
+            margin-left: 20px;
+        }
+        .job-experience {
+            margin-bottom: 15px;
+        }
+        .job-experience strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Profil Diri</h1>
+        
+        <h2>MAKLUMAT PERIBADI</h2>
+        <div class="section-content">
+            <ul>
+                <li><strong>Nama:</strong> Rohaidi bin Habil </li>
+                <li><strong>Alamat:</strong> PT3335 Hadapan SMK Panji, 16100 Kota Bharu Kelantan </li>
+                <li><strong>No. Tel:</strong> 011-40269466 </li>
+                <li><strong>Email:</strong> rohaidi69@gmail.com </li>
+                <li><strong>Umur:</strong> 55 Tahun </li>
+                <li><strong>Tarikh Lahir:</strong> 03 Ogos 1969 </li>
+                <li><strong>Warganegara:</strong> Malaysia </li>
+                <li><strong>Jantina:</strong> Lelaki </li>
+                <li><strong>Status Perkahwinan:</strong> Berkahwin </li>
+            </ul>
+        </div>
+
+        <h2>KELULUSAN AKADEMIK</h2>
+        <div class="section-content">
+            <ul>
+                <li>Sarjana Pengajian Bahasa Moden, Universiti Malaya Malaysia (1999-2002) </li>
+                <li>Sarjana Muda Pendidikan Bahasa Arab, Universiti Ummul Qura Arab Saudi (1991-1997) </li>
+            </ul>
+        </div>
+
+        <h2>TANGGUNGJAWAB PENGAJARAN DAN PENGURUSAN SEMASA</h2>
+        <div class="section-content">
+            <ul>
+                <li>Pensyarah Fakulti Pengajian Islam dan Bahasa Arab KIAS </li>
+                <li>Pengajaran </li>
+                <li>Penyelidikan </li>
+                <li>Penerbitan </li>
+                <li>Penyertaan seminar </li>
+            </ul>
+        </div>
+
+        <h2>PENGALAMAN KERJA</h2>
+        <div class="section-content">
+            <div class="job-experience">
+                <strong>2001-sekarang:</strong> 
+                <ul>
+                    <li>Nama Institusi: Fakulti Pengajian Islam dan Bahasa Arab, Kolej Universiti Islam Antarabangsa Sultan Ismail Petra (KIAS) </li>
+                    <li>Jawatan: Pensyarah (DK44) </li>
+                </ul>
+            </div>
+            <div class="job-experience">
+                <strong>1997-2001:</strong> 
+                <ul>
+                    <li>Nama Institusi: Maahad Tahfiz al-Quran Pulai Chondong (YIK) </li>
+                    <li>Jawatan: Guru Bahasa Arab </li>
+                </ul>
+            </div>
+            <div class="job-experience">
+                <strong>1989-1991:</strong> 
+                <ul>
+                    <li>Nama Institusi: SMU(A) Rahmaniah Kuala Krai (YIK) </li>
+                    <li>Jawatan: Guru Bahasa Arab </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>KEAHLIAN PROFESIONAL SEMASA</h2>
+        <div class="section-content">
+            <p>Maklumat tidak disediakan dalam CV. </p>
+        </div>
+
+        <h2>PENYELIDIKAN & PENERBITAN</h2>
+        <div class="section-content">
+            <p>Maklumat tidak disediakan dalam CV. </p>
+        </div>
+
+        <h2>PERSIDANGAN & LATIHAN</h2>
+        <div class="section-content">
+            <p>Maklumat tidak disediakan dalam CV. </p>
+        </div>
+
+        <h2>PENYELIAAN/PERUNDINGAN</h2>
+        <div class="section-content">
+            <p>Maklumat tidak disediakan dalam CV. </p>
+        </div>
+
+        <h2>MAKLUMAT LAIN YANG BERKAITAN</h2>
+        <div class="section-content">
+            <p>Maklumat tidak disediakan dalam CV. </p>
+        </div>
+
+        <h2>RUJUKAN</h2>
+        <div class="section-content">
+            <p>Maklumat tidak disediakan dalam CV. </p>
+        </div>
+    </div>
+</body>
+</html>
