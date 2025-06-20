@@ -63,8 +63,8 @@ const articles = [
     id: "Sejarah ASP",
     title: "Sejarah Bahasa Arab Untuk Tujuan Khusus (ASP)",
     date: "2025-06-18",
-    category: "Teknologi",
-    tags: ["Blog", "Teknologi"],
+    category: "Pendidikan",
+    tags: ["Bahasa", "Pembelajaran"],
     content: `
       <p><strong>Sejarah Bahasa Arab Untuk Tujuan Khusus (ASP)</strong></p>
 <p>Konsep pengajaran bahasa untuk tujuan khusus bermula secara meluas selepas Perang Dunia Kedua, khususnya dengan perkembangan English for Specific Purposes (ESP) pada tahun 1960-an dan 1970-an (Dudley-Evans &amp; St John, 1998). Dari situ, konsep ini diperluaskan kepada bahasa lain termasuk Bahasa Arab, yang mana ASP mula berkembang sebagai satu bidang yang tersendiri. Walaupun pengajaran bahasa Arab tradisional menumpukan kepada tatabahasa dan kemahiran komunikasi umum, ASP menyesuaikan pembelajaran bahasa Arab mengikut keperluan bidang tertentu seperti perniagaan, perubatan, pelancongan, dan keagamaan (Al-Batal, 2016).</p>
