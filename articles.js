@@ -60,8 +60,8 @@ const articles = [
     `
   },
   {
-    id: "cara-bina-blog",
-    title: "Cara Membina Blog Mudah",
+    id: "Sejarah ASP",
+    title: "Sejarah Bahasa Arab Untuk Tujuan Khusus (ASP)",
     date: "2025-06-18",
     category: "Teknologi",
     tags: ["Blog", "Teknologi"],
