@@ -1,0 +1,7 @@
+CREATE TABLE komen (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    artikel_id VARCHAR(100) NOT NULL,
+    nama VARCHAR(100),
+    komen TEXT,
+    tarikh DATETIME DEFAULT CURRENT_TIMESTAMP
+);
