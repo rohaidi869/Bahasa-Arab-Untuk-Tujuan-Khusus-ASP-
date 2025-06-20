@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli("localhost", "user_db", "password_db", "nama_db");
+$mysqli = new mysqli("sql206.infinityfree.com", "if0_39284290_ASP", "myIF@2042", "if0_39284290_ASP");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $artikel_id = $_POST['artikel_id'];
