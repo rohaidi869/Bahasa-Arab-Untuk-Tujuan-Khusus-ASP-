@@ -79,8 +79,77 @@ const articles = [
 <p>Dudley-Evans, T., &amp; St John, M. J. (1998). *Developments in English for Specific Purposes: A multi-disciplinary approach*. Cambridge University Press.</p>
 <p>Mat Daud, N., &amp; Abu Kassim, N. L. (2011). Pengajaran Bahasa Arab untuk tujuan khusus di Malaysia: Satu tinjauan. *GEMA Online Journal of Language Studies, 11*(1), 129-142.</p>
 <p>Saleh, M. (2013). Arabic for Specific Purposes (ASP): A new trend in teaching and learning Arabic language. *International Journal of Social Science and Humanity, 3*(5), 500&ndash;503. https://doi.org/10.7763/IJSSH.2013.V3.293</p>
-
     `
+  },
+  {
+    id: "Penkelasan ASP",
+    title: "Pengkelasan Pengajaran Bahasa Arab Untuk Tujuan Khusus (ASP)",
+    date: "2025-06-18",
+    category: "Pendidikan",
+    tags: ["Bahasa", "Pembelajaran"],
+    content: `
+  <p><strong>Pengkelasan Pengajaran Bahasa Arab Untuk Tujuan Khas (ASP)</strong></p>
+<p>Bahasa Arab Untuk Tujuan Khas (Arabic for Specific Purposes, ASP) adalah cabang linguistik terapan yang menumpukan kepada pengajaran bahasa Arab mengikut keperluan dan konteks bidang tertentu. ASP semakin penting dalam dunia pendidikan dan profesion kerana ia menyesuaikan pembelajaran bahasa Arab dengan objektif khusus pelajar atau pengguna bahasa dalam pelbagai sektor (Yuslina, 2018). Artikel ini bertujuan memberi kefahaman tentang pengkelasan ASP berdasarkan bidang dan pendekatan pengajaran yang digunakan.</p>
+<p><strong>Pengkelasan ASP Berdasarkan Bidang</strong></p>
+<p>ASP boleh diklasifikasikan mengikut bidang penggunaan bahasa Arab yang spesifik. Antara pengkelasan utama yang sering diketengahkan dalam literatur adalah seperti berikut:</p>
+<ul>
+<li>Bahasa Arab untuk Pengajian Islam (Arabic for Islamic Studies - AIS)</li>
+</ul>
+<p>Fokus kepada penguasaan bahasa Arab yang berkaitan dengan disiplin ilmu Islam seperti Syariah, Usuluddin, Al-Quran dan Al-Hadith. AIS sangat penting kerana medium pengajaran ilmu-ilmu Islam adalah dalam bahasa Arab, dan pelajar memerlukan kefahaman kosa kata dan istilah khusus dalam bidang ini (Yuslina, 2018).</p>
+<ul>
+<li>Bahasa Arab untuk Pelancongan</li>
+</ul>
+<p>Menumpukan kepada kosa kata, frasa, dan komunikasi yang relevan dalam sektor pelancongan, seperti perkhidmatan pelanggan, pemanduan pelancong, dan interaksi dalam konteks perjalanan.</p>
+<ul>
+<li>Bahasa Arab untuk Diplomasi dan Hubungan Antarabangsa</li>
+</ul>
+<p>Menyediakan kemahiran bahasa yang diperlukan untuk komunikasi rasmi dan tidak rasmi dalam bidang diplomasi, termasuk penggunaan istilah politik dan undang-undang antarabangsa.</p>
+<ul>
+<li>Bahasa Arab untuk Perniagaan dan Ekonomi</li>
+</ul>
+<p>Fokus kepada istilah dan komunikasi dalam bidang perniagaan, perbankan, dan ekonomi yang membolehkan pengguna bahasa berinteraksi secara profesional dalam konteks ekonomi Arab.</p>
+<ul>
+<li>Bahasa Arab untuk Media dan Jurnalistik</li>
+</ul>
+<p>Menekankan penguasaan bahasa Arab yang digunakan dalam media cetak, elektronik, dan digital termasuk istilah teknikal dan gaya bahasa yang sesuai.</p>
+<ul>
+<li>Bahasa Arab untuk Teknologi dan Sains</li>
+</ul>
+<p>Melibatkan kosa kata dan istilah khusus yang digunakan dalam bidang teknologi maklumat, sains, dan kejuruteraan.</p>
+<p><strong>Pendekatan dan Ciri Pengajaran ASP</strong></p>
+<p>Pengajaran ASP berbeza dengan pengajaran bahasa Arab umum kerana ia lebih fokus kepada:</p>
+<ul>
+<li>Keperluan dan Autentikasi</li>
+</ul>
+<p>Pembinaan kurikulum ASP sangat bergantung kepada analisis keperluan (needs analysis) pelajar dan institusi. Ini memastikan bahan pengajaran adalah relevan dan autentik mengikut konteks bidang tertentu (Yuslina, 2018).</p>
+<ul>
+<li>Integrasi Aspek Naqli dan Aqli</li>
+</ul>
+<p>Dalam konteks pengajaran ASP di institusi seperti Universiti Sains Islam Malaysia (USIM), pendekatan integrasi antara sumber wahyu (Naqli) dan akal (Aqli) digunakan untuk menyeimbangkan aspek agama dan ilmu duniawi dalam pembelajaran bahasa Arab (Abdullah et al., 2020).</p>
+<ul>
+<li>Penyesuaian Kosa Kata dan Struktur Bahasa</li>
+</ul>
+<p>Fokus kepada penguasaan kosa kata, frasa, dan struktur tatabahasa yang khusus digunakan dalam bidang tertentu, berbeza dengan bahasa Arab umum yang lebih luas dan umum.</p>
+<ul>
+<li>Penggunaan Bahan Asli dan Konteks Nyata</li>
+</ul>
+<p>Pengajaran ASP menggunakan bahan-bahan asli seperti teks akademik, dokumen rasmi, artikel media, dan bahan komunikasi profesional untuk meningkatkan kemahiran bahasa yang praktikal dan kontekstual.</p>
+<p><strong>Kepentingan Pengkelasan ASP</strong></p>
+<p>Pengkelasan ASP membantu dalam:</p>
+<ul>
+<li>Menyusun kurikulum yang lebih berfokus dan berkesan mengikut bidang.</li>
+<li>Memudahkan pelajar menguasai bahasa Arab secara khusus dan praktikal.</li>
+<li>Membantu tenaga pengajar merancang bahan pengajaran yang sesuai dengan keperluan pelajar.</li>
+<li>Menyokong pembangunan profesionalisme dalam bidang yang memerlukan penguasaan bahasa Arab.</li>
+</ul>
+<p><strong>Kesimpulan</strong></p>
+<p>Pengkelasan pengajaran Bahasa Arab Untuk Tujuan Khas (ASP) adalah penting untuk memastikan pembelajaran bahasa Arab dapat memenuhi keperluan khusus pelajar dalam pelbagai bidang. Dengan pendekatan yang berfokus dan analisis keperluan yang teliti, ASP dapat membantu pelajar menguasai bahasa Arab secara efektif dan relevan dengan bidang yang diceburi.</p>
+<p>&nbsp;</p>
+<p><strong>Rujukan</strong></p>
+<p>Abdullah, N., Ismail, N., &amp; Yuslina, Y. (2020). Integrasi Naqli dan Aqli dalam pengajaran Bahasa Arab Tujuan Khas di Universiti Sains Islam Malaysia. Jurnal Bahasa Arab al-&lsquo;Abqari, 15, 85-102. https://abqarijournal.usim.edu.my/index.php/abqari/article/view/31</p>
+<p>Yuslina, Y. (2018). Bahasa Arab untuk Pengajian Islam: Keperluan dan Autentikasi. Jurnal Bahasa Arab al-&lsquo;Abqari, 15, 90-105. https://abqarijournal.usim.edu.my/index.php/abqari/article/view/31</p>
+<p>Yuslina, Y. (2015). Keperluan dan pembangunan kurikulum Bahasa Arab Tujuan Khas. Jurnal Linguistik Terapan, 7(2), 45-60.</p>  `
   }
+  
   // Tambah artikel baru di sini!
 ];
