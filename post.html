@@ -59,3 +59,17 @@
   </script>
 </body>
 </html>
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+  this.page.url = window.location.href;
+  this.page.identifier = window.location.search; // atau gunakan id artikel
+};
+(function() {
+  var d = document, s = d.createElement('script');
+  s.src = 'https://YOUR_DISQUS_SHORTNAME.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Sila aktifkan JavaScript untuk melihat komen.</noscript>
