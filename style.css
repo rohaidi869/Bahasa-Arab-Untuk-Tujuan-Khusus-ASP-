@@ -183,3 +183,36 @@ h1, h2 {
 .main-menu a:hover {
   background: #005fa3;
 }
+/* Responsive untuk telefon */
+@media (max-width: 600px) {
+  body {
+    padding: 8px;
+    max-width: 100%;
+  }
+  .main-menu-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px;
+  }
+  .main-menu {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  .main-menu a {
+    padding: 10px 12px;
+    width: 100%;
+  }
+  img.logo-menu {
+    width: 40px;
+    height: 40px;
+  }
+  .article-card {
+    padding: 10px;
+  }
+  table, th, td {
+    font-size: 1em;
+    padding: 6px;
+  }
+}
