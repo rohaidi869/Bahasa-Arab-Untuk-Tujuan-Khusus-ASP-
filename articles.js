@@ -16,19 +16,16 @@ const articles = [
 <li>Kemahiran membaca dan memahami teks khusus seperti dokumen perniagaan, artikel akademik, atau manual teknikal</li>
 <li>Latihan komunikasi lisan dan tulisan dalam konteks profesional atau akademik (Al-Batal, 2016)</li>
 </ul>
+<h2>Senarai Pelajar</h2>
 <table>
-<tbody>
-<tr>
-<td width="200">
-<p>Aspek&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-</td>
-<td width="100">
-<p>Bahasa Arab Umum&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-</td>
-<td width="100">
-<p>Bahasa Arab Untuk Tujuan Khusus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-</td>
-</tr>
+  <thead>
+    <tr>
+      <th>Aspek</th>
+      <th>Bahasa Arab Umum</th>
+      <th>Bahasa Arab Untuk Tujuan Khusu</th>
+    </tr>
+ </tbody>
+</table>
 <tr>
 <td width="100">
 <p>Skop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
