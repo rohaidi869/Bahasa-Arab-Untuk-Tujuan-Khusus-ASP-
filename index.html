@@ -2,24 +2,52 @@
 <html lang="ms">
 <head>
   <meta charset="UTF-8">
-  <title>Senarai Artikel</title>
+  <title>Bahasa Arab Untuk Tujuan Khusus (ASP)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Senarai Artikel</h1>
-  <div id="article-list"></div>
+  <nav>
+    <ul class="main-menu">
+      <li><a href="Profil.html">Profil Diri</a></li>
+      <li><a href="index.html">Utama</a></li>
+      <li><a href="services.html">Perkhidmatan</a></li>
+      <li><a href="categories.html">Kategori</a></li>
+      <li><a href="galeri.html"></a>Galeri</a></li>
+      <li><a href="contact.html">Hubungi</a></li>
+    </ul>
+   </nav>
+    <img src="gambar_saya.jpg" alt="Gambar Profil" width="150" style="border-radius: 10px;">
+  </nav>
+  <h1>Selamat Datang ke Blog Saya</h1>
+  <h1>Bahasa Arab Untuk Tujuan Khusus</h1>
+  <form id="searchForm" class="search-bar">
+    <input type="text" id="searchInput" placeholder="Cari artikel..." />
+  </form>
+  <div id="articles-list"></div>
   <script src="articles.js"></script>
   <script>
-    let html = '';
-    for (const article of articles) {
-      html += `
-        <div class="artikel">
-          <h2><a href="post.html?id=${encodeURIComponent(article.id)}">${article.title}</a></h2>
+    function renderArticles(filter = "") {
+      const list = document.getElementById('articles-list');
+      let filtered = articles;
+      if (filter) {
+        filtered = articles.filter(a => 
+          a.title.toLowerCase().includes(filter.toLowerCase())
+          || a.content.toLowerCase().includes(filter.toLowerCase())
+        );
+      }
+      list.innerHTML = filtered.map(article => `
+        <div class="article-card">
+          <h2><a href="post.html?id=${article.id}">${article.title}</a></h2>
           <div class="meta">${article.date} | ${article.category}</div>
-          <div>${article.tags.map(t=>`<span class="tag">${t}</span>`).join(' ')}</div>
+          <div>${article.content.substring(0, 100)}...</div>
         </div>
-      `;
+      `).join('') || "<p>Tiada artikel dijumpai.</p>";
     }
-    document.getElementById('article-list').innerHTML = html;
+    renderArticles();
+    document.getElementById('searchInput').addEventListener('input', e => {
+      renderArticles(e.target.value);
+    });
   </script>
 </body>
 </html>
