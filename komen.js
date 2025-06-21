@@ -24,3 +24,7 @@ function submitKomen(ev, artikel_id) {
     }
   });
 }
+// Contoh: Jangan guna ini jika sudah ada dalam HTML
+document.body.innerHTML += `
+<form id="komen-form"> ... </form>
+`;
