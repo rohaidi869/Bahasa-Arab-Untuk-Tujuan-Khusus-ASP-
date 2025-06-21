@@ -28,8 +28,7 @@ const articles = [
 <td width="200">
 <p>Bahasa Arab Untuk Tujuan Khusus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-</ul>
-<table>
+</thead>
 <tbody>
 <tr>
 <td width="200">
