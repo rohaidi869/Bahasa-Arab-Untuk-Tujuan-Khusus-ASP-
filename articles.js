@@ -19,58 +19,59 @@ const articles = [
 <table>
 <thead>
 <tr>
-<td width="200">
+<td width="100">
 <p>Aspek&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-<td width="200">
+<td width="100">
 <p>Bahasa Arab Umum&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-<td width="200">
+<td width="100">
 <p>Bahasa Arab Untuk Tujuan Khusus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
+</tr>
 </thead>
 <tbody>
 <tr>
-<td width="200">
+<td width="100">
 <p>Skop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-<td width="200">
+<td width="100">
 <p>Luas, umum, harian&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-<td width="200">
+<td width="100">
 <p>Spesifik, mengikut bidang/minat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td width="200">
+<td width="100">
 <p>Tujuan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-<td width="200">
+<td width="100">
 <p>Penguasaan asas bahasa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-<td width="200">
+<td width="100">
 <p>Penguasaan bidang tertentu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td width="200">
+<td width="100">
 <p>Kurikulum&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-<td width="200">
+<td width="100">
 <p>Umum, standard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-<td width="200">
+<td width="100">
 <p>Disusun khusus, fleksibel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td width="200">
+<td width="100">
 <p>Contoh&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-<td width="200">
+<td width="100">
 <p>Komunikasi seharian&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-<td width="200">
+<td width="100">
 <p>Bahasa Arab untuk perbankan, agama&nbsp;&nbsp;</p>
 </td>
 </tr>
