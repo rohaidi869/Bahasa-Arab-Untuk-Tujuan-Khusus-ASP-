@@ -24,8 +24,8 @@ const articles = [
       <th>Bahasa Arab Umum</th>
       <th>Bahasa Arab Untuk Tujuan Khusu</th>
     </tr>
+ </table>
  </tbody>
-</table>
 <tr>
 <td width="100">
 <p>Skop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
