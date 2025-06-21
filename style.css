@@ -216,3 +216,60 @@ h1, h2 {
     padding: 6px;
   }
 }
+#komen-form {
+  background: #f1f7fa;
+  border-radius: 10px;
+  padding: 24px 20px 18px 20px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+  max-width: 500px;
+  margin: 32px auto 24px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#komen-form label {
+  font-weight: bold;
+  color: #007acc;
+  margin-bottom: 4px;
+}
+
+#komen-form input[type="text"], 
+#komen-form textarea {
+  width: 100%;
+  border: 1px solid #b2dfdb;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 1em;
+  box-sizing: border-box;
+  transition: border 0.2s;
+  background: #fff;
+}
+
+#komen-form input[type="text"]:focus, 
+#komen-form textarea:focus {
+  border: 1.5px solid #007acc;
+  outline: none;
+}
+
+#komen-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+#komen-form button {
+  background: #007acc;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 3px;
+  transition: background 0.2s;
+}
+
+#komen-form button:hover {
+  background: #005fa3;
+}
