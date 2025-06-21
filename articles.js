@@ -6,7 +6,7 @@ const articles = [
     category: "Pendidikan",
     tags: ["Bahasa", "Pembelajaran"],
     content: `
-<p><strong>Bahasa Arab Untuk Tujuan Khusus: Satu Pengenalan</strong></p>
+      <p><strong>Bahasa Arab Untuk Tujuan Khusus: Satu Pengenalan</strong></p>
 <p>Bahasa Arab Untuk Tujuan Khusus (Arabic for Specific Purposes, ASP) ialah bidang pengajaran bahasa Arab yang menumpukan kepada keperluan pembelajaran dalam konteks tertentu seperti akademik, profesional, atau vokasional. ASP berbeza daripada pengajaran bahasa Arab umum kerana ia memberi fokus kepada penguasaan bahasa yang relevan dengan bidang atau situasi tertentu, sama ada untuk tujuan agama, perniagaan, perubatan, pelancongan, diplomasi, atau teknologi (Al-Batal, 2016).</p>
 <p><strong>Apakah Itu Bahasa Arab Untuk Tujuan Khusus?</strong></p>
 <p>ASP lahir daripada konsep pengajaran bahasa untuk tujuan khusus yang mula berkembang pesat selepas Perang Dunia Kedua, selari dengan keperluan dunia moden yang semakin menuntut penguasaan bahasa asing dalam pelbagai bidang profesional (Dudley-Evans &amp; St John, 1998). Dalam konteks bahasa Arab, ASP membolehkan pelajar atau profesional menguasai kosa kata, struktur ayat, dan kemahiran komunikasi yang spesifik mengikut bidang yang diceburi (Saleh, 2013).</p>
@@ -100,9 +100,9 @@ const articles = [
 <p>Al-Batal, M. (2016). Arabic for specific purposes (ASP) and Arabic for academic purposes (AAP): Overview and recommendations. Al-&lsquo;Arabiyya, 49, 1&ndash;30. https://doi.org/10.1353/ara.2016.0002</p>
 <p>Dudley-Evans, T., &amp; St John, M. J. (1998). Developments in English for Specific Purposes: A multi-disciplinary approach. Cambridge University Press.</p>
 <p>Saleh, M. (2013). Arabic for Specific Purposes (ASP): A new trend in teaching and learning Arabic language. International Journal of Social Science and Humanity, 3(5), 500&ndash;503. https://doi.org/10.7763/IJSSH.2013.V3.293</p>
- </ul> 
- }
-]`
+
+    `
+  },
   {
     id: "Sejarah ASP",
     title: "Sejarah Bahasa Arab Untuk Tujuan Khusus (ASP)",
@@ -110,7 +110,7 @@ const articles = [
     category: "Pendidikan",
     tags: ["Bahasa", "Pembelajaran"],
     content: `
-<p><strong>Sejarah Bahasa Arab Untuk Tujuan Khusus (ASP)</strong></p>
+      <p><strong>Sejarah Bahasa Arab Untuk Tujuan Khusus (ASP)</strong></p>
 <p>Konsep pengajaran bahasa untuk tujuan khusus bermula secara meluas selepas Perang Dunia Kedua, khususnya dengan perkembangan English for Specific Purposes (ESP) pada tahun 1960-an dan 1970-an (Dudley-Evans &amp; St John, 1998). Dari situ, konsep ini diperluaskan kepada bahasa lain termasuk Bahasa Arab, yang mana ASP mula berkembang sebagai satu bidang yang tersendiri. Walaupun pengajaran bahasa Arab tradisional menumpukan kepada tatabahasa dan kemahiran komunikasi umum, ASP menyesuaikan pembelajaran bahasa Arab mengikut keperluan bidang tertentu seperti perniagaan, perubatan, pelancongan, dan keagamaan (Al-Batal, 2016).</p>
 <p>Perkembangan ASP dipacu oleh beberapa faktor global seperti krisis minyak 1970-an yang meningkatkan keperluan komunikasi profesional di negara-negara Teluk, serta peristiwa 11 September 2001 yang menimbulkan keperluan penguasaan bahasa Arab dalam bidang keselamatan dan diplomasi (Saleh, 2013). Fenomena globalisasi juga memperkukuh keperluan ASP dalam pelbagai sektor profesional dan akademik.</p>
 <p>Di Malaysia, pengajaran ASP mula diperkenalkan sejak 1960-an dan semakin berkembang seiring dengan perubahan dalam sistem pendidikan dan keperluan pasaran kerja. Pendekatan pembelajaran kini lebih berfokus kepada analisis keperluan pelajar dan bidang yang diceburi, menjadikan kurikulum lebih fleksibel dan relevan (Mat Daud &amp; Abu Kassim, 2011).</p>
@@ -123,16 +123,17 @@ const articles = [
 <p>Dudley-Evans, T., &amp; St John, M. J. (1998). *Developments in English for Specific Purposes: A multi-disciplinary approach*. Cambridge University Press.</p>
 <p>Mat Daud, N., &amp; Abu Kassim, N. L. (2011). Pengajaran Bahasa Arab untuk tujuan khusus di Malaysia: Satu tinjauan. *GEMA Online Journal of Language Studies, 11*(1), 129-142.</p>
 <p>Saleh, M. (2013). Arabic for Specific Purposes (ASP): A new trend in teaching and learning Arabic language. *International Journal of Social Science and Humanity, 3*(5), 500&ndash;503. https://doi.org/10.7763/IJSSH.2013.V3.293</p>
-}
-]
+
+    `
+  },
   {
     id: "Pengkelasan ASP",
     title: "Pengkelasan Pengajaran Bahasa Arab Untuk Tujuan Khusus (ASP)",
     date: "2025-06-18",
     category: "Pendidikan",
     tags: ["Bahasa", "Pembelajaran"],
-    content: 
-<p><strong>Pengkelasan Pengajaran Bahasa Arab Untuk Tujuan Khas (ASP)</strong></p>
+    content: `
+      <p><strong>Pengkelasan Pengajaran Bahasa Arab Untuk Tujuan Khas (ASP)</strong></p>
 <p>Bahasa Arab Untuk Tujuan Khas (Arabic for Specific Purposes, ASP) adalah cabang linguistik terapan yang menumpukan kepada pengajaran bahasa Arab mengikut keperluan dan konteks bidang tertentu. ASP semakin penting dalam dunia pendidikan dan profesion kerana ia menyesuaikan pembelajaran bahasa Arab dengan objektif khusus pelajar atau pengguna bahasa dalam pelbagai sektor (Yuslina, 2018). Artikel ini bertujuan memberi kefahaman tentang pengkelasan ASP berdasarkan bidang dan pendekatan pengajaran yang digunakan.</p>
 <p><strong>Pengkelasan ASP Berdasarkan Bidang</strong></p>
 <p>ASP boleh diklasifikasikan mengikut bidang penggunaan bahasa Arab yang spesifik. Antara pengkelasan utama yang sering diketengahkan dalam literatur adalah seperti berikut:</p>
@@ -195,9 +196,9 @@ const articles = [
 <p>Yuslina, Y. (2018). Bahasa Arab untuk Pengajian Islam: Keperluan dan Autentikasi. Jurnal Bahasa Arab al-&lsquo;Abqari, 15, 90-105. https://abqarijournal.usim.edu.my/index.php/abqari/article/view/31</p>
 <p>Yuslina, Y. (2015). Keperluan dan pembangunan kurikulum Bahasa Arab Tujuan Khas. Jurnal Linguistik Terapan, 7(2), 45-60.</p>  `
 </ul>
-  }
-];`
 
+    `
+  },
   {
     id: "Perbezaan ASP Umum",
     title: "Perbezaan Antara Bahasa Arab Untuk Tujuan Khusus dan Bahasa Arab Umum",
@@ -205,7 +206,7 @@ const articles = [
     category: "Pendidikan",
     tags: ["Bahasa", "Pembelajaran"],
     content: `
-<p><strong>Perbezaan Antara Bahasa Arab Untuk Tujuan Khusus dan Bahasa Arab Umum</strong></p>
+      <p><strong>Perbezaan Antara Bahasa Arab Untuk Tujuan Khusus dan Bahasa Arab Umum</strong></p>
 <p>Bahasa Arab Untuk Tujuan Khusus (Arabic for Specific Purposes, ASP) dan Bahasa Arab Umum merupakan dua pendekatan utama dalam pengajaran bahasa Arab. Kedua-duanya mempunyai matlamat, kandungan, dan strategi pengajaran yang berbeza, bergantung kepada keperluan pelajar dan tujuan pembelajaran. Artikel ini akan menjelaskan perbezaan utama antara kedua pendekatan ini berdasarkan kajian dan literatur terkini.</p>
 <p><strong>Definisi dan Matlamat</strong></p>
 <p>Bahasa Arab Umum bertujuan untuk memberikan pengetahuan asas tentang bahasa Arab, termasuk tatabahasa, perbendaharaan kata, dan kemahiran komunikasi harian. Pendekatan ini sesuai untuk pelajar yang ingin menguasai bahasa Arab secara umum tanpa fokus kepada bidang tertentu (Basri &amp; Mohd Azhar, 2005).</p>
@@ -301,5 +302,7 @@ const articles = [
 <p>Saleh, M. (2013). Arabic for Specific Purposes (ASP): A new trend in teaching and learning Arabic language. <em>International Journal of Social Science and Humanity, 3</em>(5), 500&ndash;503. <a href="https://doi.org/10.7763/IJSSH.2013.V3.293">https://doi.org/10.7763/IJSSH.2013.V3.293</a></p>
 <p>Tengkari, A. (2007). The difference between Arabic for specific purpose and Arabic for general purpose. <em>Issues in Language Studies, 8</em>(1), 1&ndash;15.</p>
 <p>Nadwah, A. (1998). Arabic for specific purposes: A literature review. <em>Issues in Language Studies, 8</em>(1), 1&ndash;15.</p>    `
- }
-];   
+
+    `
+  }
+];`
