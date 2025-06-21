@@ -193,7 +193,7 @@ const articles = [
   `
   },
   {
-    id: "Perbezaan ASP Umum",
+    id: "Perbezaan_ASP_Umum",
     title: "Perbezaan Antara Bahasa Arab Untuk Tujuan Khusus dan Bahasa Arab Umum",
     date: "2025-06-21",
     category: "Pendidikan",
