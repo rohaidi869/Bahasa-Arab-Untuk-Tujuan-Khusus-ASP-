@@ -190,7 +190,7 @@ const articles = [
 <p>Abdullah, N., Ismail, N., &amp; Yuslina, Y. (2020). Integrasi Naqli dan Aqli dalam pengajaran Bahasa Arab Tujuan Khas di Universiti Sains Islam Malaysia. Jurnal Bahasa Arab al-&lsquo;Abqari, 15, 85-102. https://abqarijournal.usim.edu.my/index.php/abqari/article/view/31</p>
 <p>Yuslina, Y. (2018). Bahasa Arab untuk Pengajian Islam: Keperluan dan Autentikasi. Jurnal Bahasa Arab al-&lsquo;Abqari, 15, 90-105. https://abqarijournal.usim.edu.my/index.php/abqari/article/view/31</p>
 <p>Yuslina, Y. (2015). Keperluan dan pembangunan kurikulum Bahasa Arab Tujuan Khas. Jurnal Linguistik Terapan, 7(2), 45-60.</p>  `
-  }
+
 },
   {
     id: "Perbezaan ASP Umum",
