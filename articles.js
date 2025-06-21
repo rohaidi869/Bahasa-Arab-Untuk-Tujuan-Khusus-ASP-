@@ -31,7 +31,6 @@ const articles = [
 </ul>
 <table>
 <tbody>
-</tr>
 <tr>
 <td width="200">
 <p>Skop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
