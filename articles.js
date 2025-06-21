@@ -190,8 +190,8 @@ const articles = [
 <p>Abdullah, N., Ismail, N., &amp; Yuslina, Y. (2020). Integrasi Naqli dan Aqli dalam pengajaran Bahasa Arab Tujuan Khas di Universiti Sains Islam Malaysia. Jurnal Bahasa Arab al-&lsquo;Abqari, 15, 85-102. https://abqarijournal.usim.edu.my/index.php/abqari/article/view/31</p>
 <p>Yuslina, Y. (2018). Bahasa Arab untuk Pengajian Islam: Keperluan dan Autentikasi. Jurnal Bahasa Arab al-&lsquo;Abqari, 15, 90-105. https://abqarijournal.usim.edu.my/index.php/abqari/article/view/31</p>
 <p>Yuslina, Y. (2015). Keperluan dan pembangunan kurikulum Bahasa Arab Tujuan Khas. Jurnal Linguistik Terapan, 7(2), 45-60.</p>  `
-
-},
+  `
+  },
   {
     id: "Perbezaan ASP Umum",
     title: "Perbezaan Antara Bahasa Arab Untuk Tujuan Khusus dan Bahasa Arab Umum",
@@ -295,5 +295,8 @@ const articles = [
 <p>Saleh, M. (2013). Arabic for Specific Purposes (ASP): A new trend in teaching and learning Arabic language. <em>International Journal of Social Science and Humanity, 3</em>(5), 500&ndash;503. <a href="https://doi.org/10.7763/IJSSH.2013.V3.293">https://doi.org/10.7763/IJSSH.2013.V3.293</a></p>
 <p>Tengkari, A. (2007). The difference between Arabic for specific purpose and Arabic for general purpose. <em>Issues in Language Studies, 8</em>(1), 1&ndash;15.</p>
 <p>Nadwah, A. (1998). Arabic for specific purposes: A literature review. <em>Issues in Language Studies, 8</em>(1), 1&ndash;15.</p>
-  // Tambah artikel baru di sini!
+    `
+  },
+  {
+    // Tambah artikel baru di sini!
 ];
