@@ -9,6 +9,11 @@ body {
   border-radius: 12px;
 }
 
+/* Justify teks artikel */
+#article-content {
+  text-align: justify;
+}
+
 nav.main-menu ul {
   list-style: none;
   padding: 0;
