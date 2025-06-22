@@ -122,5 +122,6 @@ const articles = [
 <p>Dudley-Evans, T., &amp; St John, M. J. (1998). *Developments in English for Specific Purposes: A multi-disciplinary approach*. Cambridge University Press.</p>
 <p>Mat Daud, N., &amp; Abu Kassim, N. L. (2011). Pengajaran Bahasa Arab untuk tujuan khusus di Malaysia: Satu tinjauan. *GEMA Online Journal of Language Studies, 11*(1), 129-142.</p>
 <p>Saleh, M. (2013). Arabic for Specific Purposes (ASP): A new trend in teaching and learning Arabic language. *International Journal of Social Science and Humanity, 3*(5), 500&ndash;503. https://doi.org/10.7763/IJSSH.2013.V3.293</p>    `
+
   }
 ];
