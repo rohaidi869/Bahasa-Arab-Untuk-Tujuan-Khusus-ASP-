@@ -1,30 +1,45 @@
-function loadKomen(artikel_id) {
-  fetch('komen.php?artikel_id=' + encodeURIComponent(artikel_id))
-    .then(res => res.json())
-    .then(data => {
-      let html = '';
-      data.forEach(k => {
-        html += `<div class="komen-item"><strong>${k.nama}</strong>: ${k.komen} <span style="font-size:0.8em;color:#999">[${k.tarikh}]</span></div>`;
-      });
-      document.getElementById('senarai-komen').innerHTML = html;
-    });
+function loadKomen(artikelId) {
+  const komenKey = 'komen-' + artikelId;
+  const data = JSON.parse(localStorage.getItem(komenKey) || '[]');
+  const senarai = document.getElementById('senarai-komen');
+  if (!senarai) return;
+  if (data.length === 0) {
+    senarai.innerHTML = "<p>Belum ada komen. Jadilah yang pertama!</p>";
+    return;
+  }
+  senarai.innerHTML = data.map(k => `
+    <div class="komen-item">
+      <div class="komen-nama"><strong>${escapeHTML(k.nama)}</strong></div>
+      <div class="komen-teks">${escapeHTML(k.teks)}</div>
+      <div class="komen-tarikh">${k.tarikh}</div>
+    </div>
+  `).join('');
 }
-function submitKomen(ev, artikel_id) {
-  ev.preventDefault();
-  const nama = document.getElementById('nama').value;
-  const komen = document.getElementById('komen').value;
-  fetch('komen.php', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-    body: `artikel_id=${encodeURIComponent(artikel_id)}&nama=${encodeURIComponent(nama)}&komen=${encodeURIComponent(komen)}`
-  }).then(res => res.json()).then(res => {
-    if (res.status === "ok") {
-      document.getElementById('komen-form').reset();
-      loadKomen(artikel_id);
-    }
+
+function submitKomen(e, artikelId) {
+  e.preventDefault();
+  const nama = document.getElementById('nama').value.trim();
+  const teks = document.getElementById('komen').value.trim();
+  if (!nama || !teks) return;
+  const komenKey = 'komen-' + artikelId;
+  const komen = JSON.parse(localStorage.getItem(komenKey) || '[]');
+  komen.push({
+    nama,
+    teks,
+    tarikh: new Date().toLocaleString('ms-MY')
+  });
+  localStorage.setItem(komenKey, JSON.stringify(komen));
+  document.getElementById('komen-form').reset();
+  loadKomen(artikelId);
+}
+function escapeHTML(str) {
+  return str.replace(/[&<>"']/g, function(m) {
+    return ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;'
+    })[m];
   });
 }
-// Contoh: Jangan guna ini jika sudah ada dalam HTML
-document.body.innerHTML += `
-<form id="komen-form"> ... </form>
-`;
