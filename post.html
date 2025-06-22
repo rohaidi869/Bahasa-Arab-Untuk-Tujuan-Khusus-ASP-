@@ -22,6 +22,7 @@
   <div class="tags"><strong>Tag:</strong> ${article.tags.map(t=>`<span class="tag">${t}</span>`).join(' ')}</div>
   <div class="meta">${article.date} | ${article.category}</div>
   ${article.content}
+  <div id="senarai-komen"></div>
   <h3>Komen Pembaca</h3>
   <form id="komen-form" onsubmit="submitKomen(event, artikelId)">
   <label for="nama">Nama:</label>
@@ -32,7 +33,6 @@
 
   <button type="submit">Hantar Komen</button>
 </form>
-<div id="senarai-komen"></div>
        `;
     } else {
       document.getElementById('article-content').innerHTML = "<p>Artikel tidak dijumpai.</p>";
