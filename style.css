@@ -220,10 +220,7 @@ h1, h2 {
     font-size: 1em;
     padding: 6px;
   }
-  #article-content {
-  text-align: justify;
-}
-}
+  }
 #komen-form {
   background: #f1f7fa;
   border-radius: 10px;
