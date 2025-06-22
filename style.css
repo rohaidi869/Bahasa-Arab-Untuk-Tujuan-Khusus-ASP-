@@ -24,32 +24,89 @@ nav.main-menu ul {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+/* TABLE UI YANG LEBIH MENARIK */
 table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   margin: 20px 0;
   background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
 }
 
 th, td {
-  border: 1px solid #ddd;
-  padding: 10px 16px;
+  border: none;
+  padding: 14px 18px;
   text-align: left;
+  font-size: 1em;
 }
 
 th {
   background: #007acc;
   color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-tr:nth-child(even) {
+tr {
+  transition: background 0.18s;
+}
+
+tbody tr:nth-child(even) {
   background: #f1f7fa;
 }
 
-tr:hover {
+tbody tr:nth-child(odd) {
+  background: #fafcfd;
+}
+
+tbody tr:hover {
   background: #e0f2f1;
 }
 
+td {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Jika ingin rounded di penjuru table */
+table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Responsive Table (scroll jika kecil skrin) */
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  thead {
+    display: none;
+  }
+  tr {
+    margin-bottom: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    background: #fff;
+  }
+  td {
+    padding: 10px 14px;
+    border: none;
+    position: relative;
+  }
+  td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #007acc;
+    display: block;
+    margin-bottom: 4px;
+  }
+  
 nav.main-menu li {
   margin: 0;
 }
