@@ -23,15 +23,17 @@
   <div class="meta">${article.date} | ${article.category}</div>
   ${article.content}
   <h3>Komen Pembaca</h3>
-  <div id="senarai-komen"></div>
-  <form id="komen-form">
-    <label for="nama">Nama:</label>
-    <input type="text" id="nama" placeholder="Nama anda" required>
-    <label for="komen">Komen:</label>
-    <textarea id="komen" placeholder="Tulis komen anda di sini" required></textarea>
-    <button type="submit">Hantar Komen</button>
-  </form>
-      `;
+  <form id="komen-form" onsubmit="submitKomen(event, artikelId)">
+  <label for="nama">Nama:</label>
+  <input type="text" id="nama" placeholder="Nama anda" required>
+
+  <label for="komen">Komen:</label>
+  <textarea id="komen" placeholder="Tulis komen anda di sini" required></textarea>
+
+  <button type="submit">Hantar Komen</button>
+</form>
+<div id="senarai-komen"></div>
+       `;
     } else {
       document.getElementById('article-content').innerHTML = "<p>Artikel tidak dijumpai.</p>";
     }
