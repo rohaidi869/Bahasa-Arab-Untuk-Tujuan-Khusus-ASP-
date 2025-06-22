@@ -109,10 +109,18 @@ const articles = [
     category: "Pendidikan",
     tags: ["Bahasa", "Pembelajaran"],
     content: `
-    <p><strong>Bahasa Arab Untuk Tujuan Khusus: Satu Pengenalan</strong></p>
-<p>Bahasa Arab Untuk Tujuan Khusus (Arabic for Specific Purposes, ASP) ialah bidang pengajaran bahasa Arab yang menumpukan kepada keperluan pembelajaran dalam konteks tertentu seperti akademik, profesional, atau vokasional. ASP berbeza daripada pengajaran bahasa Arab umum kerana ia memberi fokus kepada penguasaan bahasa yang relevan dengan bidang atau situasi tertentu, sama ada untuk tujuan agama, perniagaan, perubatan, pelancongan, diplomasi, atau teknologi (Al-Batal, 2016).</p>
-
-<p>Saleh, M. (2013). Arabic for Specific Purposes (ASP): A new trend in teaching and learning Arabic language. International Journal of Social Science and Humanity, 3(5), 500&ndash;503. https://doi.org/10.7763/IJSSH.2013.V3.293</p>
-    `
+    <p><strong>Sejarah Bahasa Arab Untuk Tujuan Khusus (ASP)</strong></p>
+<p>Konsep pengajaran bahasa untuk tujuan khusus bermula secara meluas selepas Perang Dunia Kedua, khususnya dengan perkembangan English for Specific Purposes (ESP) pada tahun 1960-an dan 1970-an (Dudley-Evans &amp; St John, 1998). Dari situ, konsep ini diperluaskan kepada bahasa lain termasuk Bahasa Arab, yang mana ASP mula berkembang sebagai satu bidang yang tersendiri. Walaupun pengajaran bahasa Arab tradisional menumpukan kepada tatabahasa dan kemahiran komunikasi umum, ASP menyesuaikan pembelajaran bahasa Arab mengikut keperluan bidang tertentu seperti perniagaan, perubatan, pelancongan, dan keagamaan (Al-Batal, 2016).</p>
+<p>Perkembangan ASP dipacu oleh beberapa faktor global seperti krisis minyak 1970-an yang meningkatkan keperluan komunikasi profesional di negara-negara Teluk, serta peristiwa 11 September 2001 yang menimbulkan keperluan penguasaan bahasa Arab dalam bidang keselamatan dan diplomasi (Saleh, 2013). Fenomena globalisasi juga memperkukuh keperluan ASP dalam pelbagai sektor profesional dan akademik.</p>
+<p>Di Malaysia, pengajaran ASP mula diperkenalkan sejak 1960-an dan semakin berkembang seiring dengan perubahan dalam sistem pendidikan dan keperluan pasaran kerja. Pendekatan pembelajaran kini lebih berfokus kepada analisis keperluan pelajar dan bidang yang diceburi, menjadikan kurikulum lebih fleksibel dan relevan (Mat Daud &amp; Abu Kassim, 2011).</p>
+<p>ASP merangkumi pelbagai bidang khusus seperti ekonomi, pelancongan, diplomasi, pengajian Islam, dan teknologi. Setiap bidang ini memerlukan penguasaan kosa kata, istilah, dan kemahiran komunikasi yang berbeza, yang disesuaikan mengikut konteks profesional atau akademik (Al-Batal, 2016).</p>
+<p>Walaupun ASP semakin mendapat tempat, cabaran seperti kekurangan tenaga pengajar pakar dan keperluan penyelidikan lanjut masih wujud. Namun, perkembangan pesat dalam bidang ini menunjukkan ASP akan terus menjadi bidang penting dalam pengajaran bahasa Arab di masa depan (Saleh, 2013).</p>
+<p><strong>&nbsp;Kesimpulan</strong></p>
+<p>Sejarah dan perkembangan Bahasa Arab Untuk Tujuan Khusus mencerminkan evolusi pendekatan pengajaran bahasa Arab daripada tradisional kepada yang lebih dinamik dan berorientasikan keperluan khusus. ASP membantu pelajar dan profesional menguasai bahasa Arab dalam konteks yang lebih relevan dan praktikal, meningkatkan daya saing mereka dalam pelbagai bidang global.</p>
+<p><strong>Rujukan</strong></p>
+<p>Al-Batal, M. (2016). Arabic for specific purposes (ASP) and Arabic for academic purposes (AAP): Overview and recommendations. *Al-&lsquo;Arabiyya, 49*, 1&ndash;30. https://doi.org/10.1353/ara.2016.0002</p>
+<p>Dudley-Evans, T., &amp; St John, M. J. (1998). *Developments in English for Specific Purposes: A multi-disciplinary approach*. Cambridge University Press.</p>
+<p>Mat Daud, N., &amp; Abu Kassim, N. L. (2011). Pengajaran Bahasa Arab untuk tujuan khusus di Malaysia: Satu tinjauan. *GEMA Online Journal of Language Studies, 11*(1), 129-142.</p>
+<p>Saleh, M. (2013). Arabic for Specific Purposes (ASP): A new trend in teaching and learning Arabic language. *International Journal of Social Science and Humanity, 3*(5), 500&ndash;503. https://doi.org/10.7763/IJSSH.2013.V3.293</p>    `
   }
 ];
