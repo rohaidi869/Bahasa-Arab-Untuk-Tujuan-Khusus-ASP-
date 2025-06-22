@@ -22,8 +22,8 @@
   <div class="tags"><strong>Tag:</strong> ${article.tags.map(t=>`<span class="tag">${t}</span>`).join(' ')}</div>
   <div class="meta">${article.date} | ${article.category}</div>
   ${article.content}
-  <div id="senarai-komen"></div>
-  <h3>Komen Pembaca</h3>
+    <h3>Komen Pembaca</h3>
+    <div id="senarai-komen"></div>
   <form id="komen-form" onsubmit="submitKomen(event, artikelId)">
   <label for="nama">Nama:</label>
   <input type="text" id="nama" placeholder="Nama anda" required>
