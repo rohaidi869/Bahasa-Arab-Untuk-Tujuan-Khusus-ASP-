@@ -26,4 +26,19 @@
     }
   </script>
 </body>
-</html>
+</html><!-- ... kod artikel seperti biasa ... -->
+<h3>Komen Pembaca</h3>
+<div id="senarai-komen"></div>
+<form id="komen-form" onsubmit="submitKomen(event, artikelId)">
+  <input type="text" id="nama" placeholder="Nama anda" required>
+  <textarea id="komen" placeholder="Tulis komen anda di sini" required></textarea>
+  <button type="submit">Hantar Komen</button>
+</form>
+<script>
+  // artikelId ialah ID artikel semasa, contoh dari URL
+  const url = new URL(window.location.href);
+  const artikelId = url.searchParams.get("id");
+  loadKomen(artikelId);
+</script>
+<script src="komen.js"></script>
+
