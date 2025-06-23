@@ -36,7 +36,7 @@
   <script src="articles.js"></script>
   <script>
     function renderArticles(filter = "") {
-      const list = document.getElementById('articles-list');
+      const list = document.getElementById('article-list');
       let filtered = articles;
       if (filter) {
         filtered = articles.filter(a => 
@@ -57,5 +57,22 @@
       renderArticles(e.target.value);
     });
   </script>
+    <nav aria-label="Navigasi utama">
+  <ul class="main-menu">
+    <li><a href="Profil.html">Profil Diri</a></li>
+    <li><a href="index.html">Utama</a></li>
+    <li><a href="services.html">Perkhidmatan</a></li>
+    <li><a href="categories.html">Kategori</a></li>
+    <li><a href="galeri.html">Galeri</a></li>
+    <li><a href="contact.html">Hubungi</a></li>
+  </ul>
+  <img src="gambar_saya.jpg" alt="Gambar Profil" class="profile-img">
+</nav>
+<form id="searchForm" class="search-bar" role="search">
+  <label for="searchInput" class="visually-hidden">Cari artikel</label>
+  <input type="text" id="searchInput" placeholder="Cari artikel..." aria-describedby="searchDesc" />
+  <button type="submit" aria-label="Cari">Cari</button>
+  <p id="searchDesc" class="visually-hidden">Taipkan kata kunci untuk mencari artikel di blog ini.</p>
+</form>
 </body>
 </html>
