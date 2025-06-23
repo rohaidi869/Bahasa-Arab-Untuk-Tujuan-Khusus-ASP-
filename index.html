@@ -95,7 +95,6 @@
         `).join('') || "<p>Tiada artikel dijumpai.</p>";
       } catch (error) {
         console.error('Ralat memuatkan artikel:', error);
-        // Kekalkan artikel statik sebagai sandaran
         const list = document.getElementById('article-list');
         list.innerHTML = list.innerHTML || "<p>Gagal memuatkan artikel. Sila cuba lagi kemudian.</p>";
       }
