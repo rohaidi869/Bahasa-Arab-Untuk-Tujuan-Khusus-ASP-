@@ -26,6 +26,7 @@
   </form>
   <div id="senarai-artikel"></div>
   <script src="articles.js"></script>
+  <script src="articles.js"></script>
   <script>
     function renderArticles(filter = "") {
       const list = document.getElementById('articles-list');
@@ -38,9 +39,9 @@
       }
       list.innerHTML = filtered.map(article => `
         <div class="article-card">
-          <h2><a href="post.html?id=${article.id}">${article.title}</a></h2>
+          <h2><a href="post.html?id=${encodeURIComponent(article.id)}">${article.title}</a></h2>
           <div class="meta">${article.date} | ${article.category}</div>
-          <div>${article.content.substring(0, 100)}...</div>
+          <div>${article.content.replace(/<[^>]+>/g,'').substring(0, 100)}...</div>
         </div>
       `).join('') || "<p>Tiada artikel dijumpai.</p>";
     }
