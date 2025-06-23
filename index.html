@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Artikel penuh tentang Bahasa Arab Untuk Tujuan Khusus (ASP).">
-  <title>Artikel | Bahasa Arab Untuk Tujuan Khusus</title>
+  <meta name="description" content="Blog Bahasa Arab Untuk Tujuan Khusus (ASP) menyediakan artikel, perkhidmatan, dan sumber pembelajaran bahasa Arab.">
+  <meta name="keywords" content="Bahasa Arab, ASP, pembelajaran bahasa, blog bahasa Arab">
+  <meta name="author" content="Nama Anda">
+  <title>Bahasa Arab Untuk Tujuan Khusus (ASP)</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
 </head>
 <body>
   <nav aria-label="Navigasi utama">
@@ -21,13 +22,16 @@
     <img src="gambar_saya.jpg" alt="Gambar Profil" class="profile-img" loading="lazy">
   </nav>
   <main>
-    <a href="index.html" class="back-button">Kembali ke Utama</a>
+    <h1>Selamat Datang ke Blog Saya</h1>
+    <h2>Bahasa Arab Untuk Tujuan Khusus</h2>
+    <form id="searchForm" class="search-bar" role="search">
+      <label for="searchInput" class="visually-hidden">Cari artikel</label>
+      <input type="text" id="searchInput" placeholder="Cari artikel..." aria-describedby="searchDesc" />
+      <button type="submit" aria-label="Cari">Cari</button>
+      <p id="searchDesc" class="visually-hidden">Taipkan kata kunci untuk mencari artikel di blog ini.</p>
+    </form>
     <div id="loading" style="text-align: center; display: none;">Sedang memuatkan...</div>
-    <article id="post-content">
-      <h1 id="post-title"></h1>
-      <div class="meta" id="post-meta"></div>
-      <div id="post-body"></div>
-    </article>
+    <div id="article-list"></div>
   </main>
   <footer aria-label="Maklumat footer">
     <div class="footer-content">
@@ -54,15 +58,12 @@
     </div>
   </footer>
   <script>
-    async function displayArticle() {
+    async function renderArticles(filter = "") {
       const loading = document.getElementById('loading');
-      const content = document.getElementById('post-content');
+      const articleList = document.getElementById('article-list');
       loading.style.display = 'block';
-      content.style.display = 'none';
+      articleList.style.display = 'none';
       try {
-        const params = new URLSearchParams(window.location.search);
-        const articleId = params.get('id');
-        if (!articleId) throw new Error('Tiada ID artikel disediakan');
         const cachedArticles = localStorage.getItem('articles');
         let articles;
         if (cachedArticles) {
@@ -73,31 +74,42 @@
           articles = await response.json();
           localStorage.setItem('articles', JSON.stringify(articles));
         }
-        const article = articles.find(a => a.id === articleId);
-        if (!article) throw new Error('Artikel tidak ditemui dalam articles.json');
-        document.getElementById('post-title').textContent = article.title;
-        document.getElementById('post-meta').textContent = `${article.date} | ${article.category}`;
-        document.getElementById('post-body').innerHTML = DOMPurify.sanitize(article.content
-          .replace(/\n\n/g, '</p><p>')
-          .replace(/\n/g, '<br>')
-          .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-          .replace(/\|(.*?)(\n\|-+\|)+([\s\S]*?)(?=\n\n|$)/g, (match, header, _, rows) => {
-            const headers = header.split('|').map(h => h.trim()).filter(h => h);
-            const rowData = rows.trim().split('\n').map(row => 
-              row.split('|').map(cell => cell.trim()).filter(cell => cell)
-            );
-            return `<table border="1"><thead><tr>${headers.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${rowData.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
-          }));
+        let filtered = articles;
+        if (filter) {
+          filtered = articles.filter(a => 
+            a.title.toLowerCase().includes(filter.toLowerCase()) ||
+            (a.summary && a.summary.toLowerCase().includes(filter.toLowerCase()))
+          );
+        }
+        articleList.innerHTML = filtered.map(article => `
+          <article class="article-card">
+            <h2><a href="post.html?id=${encodeURIComponent(article.id)}">${article.title}</a></h2>
+            <div class="meta">${article.date} | ${article.category}</div>
+            <p>${article.summary.substring(0, 100)}...</p>
+          </article>
+        `).join('') || "<p>Tiada artikel dijumpai.</p>";
       } catch (error) {
-        console.error('Ralat memaparkan artikel:', error.message);
-        content.innerHTML = `<p>Artikel tidak dijumpai: ${error.message}</p>`;
+        console.error('Ralat memuatkan artikel:', error.message);
+        articleList.innerHTML = "<p>Gagal memuatkan artikel. Sila cuba lagi kemudian.</p>";
       } finally {
         loading.style.display = 'none';
-        content.style.display = 'block';
+        articleList.style.display = 'block';
       }
     }
 
-    displayArticle();
+    renderArticles();
+
+    const searchForm = document.getElementById('searchForm');
+    const searchInput = document.getElementById('searchInput');
+
+    searchForm.addEventListener('submit', e => {
+      e.preventDefault();
+      renderArticles(searchInput.value);
+    });
+
+    searchInput.addEventListener('input', e => {
+      renderArticles(e.target.value);
+    });
   </script>
 </body>
 </html>
