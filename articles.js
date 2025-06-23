@@ -149,12 +149,15 @@ const articles = [
 <thead>
 <tr>
 <td>
+<td width="200">
 <p><strong>Aspek</strong></p>
 </td>
 <td>
+<td width="200">
 <p><strong>Bahasa Arab Umum</strong></p>
 </td>
 <td>
+<td width="200">
 <p><strong>Bahasa Arab Untuk Tujuan Khusus (ASP)</strong></p>
 </td>
 </tr>
@@ -162,12 +165,14 @@ const articles = [
 <tbody>
 <tr>
 <td>
+<td width="200">
 <p>Matlamat</p>
 </td>
 <td>
 <p>Pengetahuan asas &amp; komunikasi</p>
 </td>
 <td>
+<td width="200">
 <p>Keperluan khusus bidang/profesi</p>
 </td>
 </tr>
@@ -176,42 +181,53 @@ const articles = [
 <p>Kandungan</p>
 </td>
 <td>
+<td width="200">
 <p>Umum, tidak spesifik</p>
 </td>
 <td>
+<td width="200">
 <p>Spesifik mengikut bidang</p>
 </td>
 </tr>
 <tr>
 <td>
+<td width="200">
 <p>Analisis Keperluan</p>
 </td>
 <td>
+<td width="200">
 <p>Tidak mendalam</p>
 </td>
 <td>
+<td width="200">
 <p>Sangat penting dan terperinci</p>
 </td>
 </tr>
 <tr>
 <td>
+<td width="200">
 <p>Kumpulan Sasaran</p>
 </td>
 <td>
+<td width="200">
 <p>Pelajar umum pelbagai latar</p>
 </td>
 <td>
+<td width="200">
 <p>Pelajar/profesional bidang tertentu</p>
 </td>
 </tr>
 <tr>
 <td>
+<td width="200">
 <p>Kaedah Pengajaran</p>
 </td>
 <td>
+<td width="200">
 <p>Tradisional, berpusat guru</p>
 </td>
 <td>
+<td width="200">
 <p>Fleksibel, berpusat pelajar &amp; autentik</p>
 </td>
 </tr>
@@ -227,5 +243,6 @@ const articles = [
 <p>Saleh, M. (2013). Arabic for Specific Purposes (ASP): A new trend in teaching and learning Arabic language. <em>International Journal of Social Science and Humanity, 3</em>(5), 500&ndash;503. <a href="https://doi.org/10.7763/IJSSH.2013.V3.293">https://doi.org/10.7763/IJSSH.2013.V3.293</a></p>
 <p>Tengkari, A. (2007). The difference between Arabic for specific purpose and Arabic for general purpose. <em>Issues in Language Studies, 8</em>(1), 1&ndash;15.</p>
 <p>Nadwah, A. (1998). Arabic for specific purposes: A literature review. <em>Issues in Language Studies, 8</em>(1), 1&ndash;15.</p>
-  }
+ 
+}
 ];
