@@ -20,9 +20,10 @@
     <img src="gambar_saya.jpg" alt="Gambar Profil" class="profile-img" loading="lazy">
   </nav>
   <main>
+    <a href="index.html" class="back-button">Kembali ke Utama</a>
     <article id="post-content">
       <h1 id="post-title"></h1>
-      <div class="meta"></div>
+      <div class="meta" id="post-meta"></div>
       <div id="post-body"></div>
     </article>
   </main>
@@ -37,7 +38,7 @@
         </a>
         <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="social-icon">
-            <path d="M14.2581 10.152L22.387 0H20.1716L13.1613 8.93312L7.61475 0H0L8.42912 13.849L0 24H2.31537L9.6645 14.2166L15.3734 24H23L14.2581 10.152ZM10.767 12.8653 9.75737 11.442L3.05287 1.70775H6.51262L11.883 9.76275L12.8926 11.186L19.9079 21.663H16.4481L10.767 12.8653Z" fill="currentColor"/>
+            <path d="M14.258 10.152L22.387 0H20.182L13.112 8.933L7.633 0H0L8.477 13.058L0 24H2.205L9.668 14.567L15.367 24H23L14.258 10.152ZM10.777 13.265L9.767 11.842L3.063 1.708H6.523L11.893 9.763L12.903 11.186L19.918 21.663H16.458L10.777 13.265Z" fill="currentColor"/>
           </svg>
         </a>
         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -52,15 +53,27 @@
   </footer>
   <script defer src="articles.js"></script>
   <script>
-    function displayArticle() {
+    async function displayArticle() {
       const params = new URLSearchParams(window.location.search);
       const articleId = params.get('id');
-      const article = articles.find(a => a.id === articleId);
-      if (article) {
+      try {
+        const response = await fetch(`articles/${articleId}.json`);
+        if (!response.ok) throw new Error('Artikel tidak dijumpai');
+        const article = await response.json();
         document.getElementById('post-title').textContent = article.title;
-        document.getElementById('meta').textContent = `${article.date} | ${article.category}`;
-        document.getElementById('post-body').innerHTML = article.content.replace(/\n/g, '<br>');
-      } else {
+        document.getElementById('post-meta').textContent = `${article.date} | ${article.category}`;
+        document.getElementById('post-body').innerHTML = article.content
+          .replace(/\n\n/g, '</p><p>')
+          .replace(/\n/g, '<br>')
+          .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+          .replace(/\|(.*?)(\n\|-+\|)+([\s\S]*?)(?=\n\n|$)/g, (match, header, _, rows) => {
+            const headers = header.split('|').map(h => h.trim()).filter(h => h);
+            const rowData = rows.trim().split('\n').map(row => 
+              row.split('|').map(cell => cell.trim()).filter(cell => cell)
+            );
+            return `<table border="1"><thead><tr>${headers.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${rowData.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+          });
+      } catch (error) {
         document.getElementById('post-content').innerHTML = '<p>Artikel tidak dijumpai.</p>';
       }
     }
