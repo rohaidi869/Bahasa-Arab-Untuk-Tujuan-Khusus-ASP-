@@ -17,7 +17,10 @@
   <form id="searchForm" class="search-bar">
     <input type="text" id="searchInput" placeholder="Cari artikel..." />
   </form>
+  <body>
+  <input id="searchInput" type="text" placeholder="Cari artikel...">
   <div id="articles-list"></div>
+
   <script src="articles.js"></script>
   <script>
     function renderArticles(filter = "") {
@@ -31,9 +34,9 @@
       }
       list.innerHTML = filtered.map(article => `
         <div class="article-card">
-          <h2><a href="post.html?id=${article.id}">${article.title}</a></h2>
+          <h2><a href="post.html?id=${encodeURIComponent(article.id)}">${article.title}</a></h2>
           <div class="meta">${article.date} | ${article.category}</div>
-          <div>${article.content.substring(0, 100)}...</div>
+          <div>${article.content.replace(/<[^>]+>/g,'').substring(0, 100)}...</div>
         </div>
       `).join('') || "<p>Tiada artikel dijumpai.</p>";
     }
@@ -42,6 +45,7 @@
       renderArticles(e.target.value);
     });
   </script>
+</body>
 <head>
   <meta charset="UTF-8">
   <title>Bahasa Arab Untuk Tujuan Khusus : Satu Pengenalan</title>
