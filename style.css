@@ -452,3 +452,20 @@ footer {
     margin: 5px;
   }
 }
+.social-icon {
+  width: 24px;
+  height: 24px;
+  fill: #333; /* Warna asal ikon */
+  transition: fill 0.3s ease;
+}
+
+.social-links a:hover .social-icon {
+  fill: #007bff; /* Warna semasa hover */
+}
+
+@media (max-width: 768px) {
+  .social-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
