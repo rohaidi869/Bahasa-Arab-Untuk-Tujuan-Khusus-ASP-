@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
+  <nav aria-label="Navigasi utama">
     <ul class="main-menu">
       <li><a href="Profil.html">Profil Diri</a></li>
       <li><a href="index.html">Utama</a></li>
@@ -19,80 +19,63 @@
       <li><a href="galeri.html">Galeri</a></li>
       <li><a href="contact.html">Hubungi</a></li>
     </ul>
-   <nav>
-  <ul class="main-menu">
-    <li><a href="Profil.html">Profil Diri</a></li>
-    <li><a href="index.html">Utama</a></li>
-    <li><a href="services.html">Perkhidmatan</a></li>
-    <li><a href="categories.html">Kategori</a></li>
-    <li><a href="galeri.html">Galeri</a></li>
-    <li><a href="contact.html">Hubungi</a></li>
-  </ul>
-  <img src="gambar_saya.jpg" alt="Gambar Profil" width="150" style="border-radius: 10px;">
-</nav>
+    <img src="gambar_saya.jpg" alt="Gambar Profil" class="profile-img" loading="lazy">
+  </nav>
   <main>
-  <h1>Selamat Datang ke Blog Saya</h1>
-  <h2>Bahasa Arab Untuk Tujuan Khusus</h2>
-  <form id="searchForm" class="search-bar" role="search">
-    <label for="searchInput" class="visually-hidden">Cari artikel</label>
-    <input type="text" id="searchInput" placeholder="Cari artikel..." aria-describedby="searchDesc" />
-    <button type="submit" aria-label="Cari">Cari</button>
-    <p id="searchDesc" class="visually-hidden">Taipkan kata kunci untuk mencari artikel di blog ini.</p>
-  </form>
-  <div id="article-list"></div>
-</main>
-  <script src="articles.js"></script>
+    <h1>Selamat Datang ke Blog Saya</h1>
+    <h2>Bahasa Arab Untuk Tujuan Khusus</h2>
+    <form id="searchForm" class="search-bar" role="search">
+      <label for="searchInput" class="visually-hidden">Cari artikel</label>
+      <input type="text" id="searchInput" placeholder="Cari artikel..." aria-describedby="searchDesc" />
+      <button type="submit" aria-label="Cari">Cari</button>
+      <p id="searchDesc" class="visually-hidden">Taipkan kata kunci untuk mencari artikel di blog ini.</p>
+    </form>
+    <div id="article-list"></div>
+  </main>
+  <footer aria-label="Maklumat footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Bahasa Arab Untuk Tujuan Khusus. Hak cipta terpelihara.</p>
+      <div class="social-links">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><img src="facebook-icon.png" alt="Ikon Facebook" width="24" height="24" loading="lazy"></a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><img src="twitter-icon.png" alt="Ikon Twitter" width="24" height="24" loading="lazy"></a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="instagram-icon.png" alt="Ikon Instagram" width="24" height="24" loading="lazy"></a>
+      </div>
+      <p>Hubungi kami: <a href="mailto:info@aspblog.com">info@aspblog.com</a> | <a href="tel:+60123456789">+6012-3456789</a></p>
+    </div>
+  </footer>
+  <script defer src="articles.js"></script>
   <script>
     function renderArticles(filter = "") {
-  const list = document.getElementById('article-list');
-  let filtered = articles;
-  if (filter) {
-    filtered = articles.filter(a => 
-      a.title.toLowerCase().includes(filter.toLowerCase()) ||
-      a.content.toLowerCase().includes(filter.toLowerCase())
-    );
-  }
-  list.innerHTML = filtered.map(article => `
-    <div class="article-card">
-      <h2><a href="post.html?id=${encodeURIComponent(article.id)}">${article.title}</a></h2>
-      <div class="meta">${article.date} | ${article.category}</div>
-      <div>${article.content.replace(/<[^>]+>/g, '').substring(0, 100)}...</div>
-    </div>
-  `).join('') || "<p>Tiada artikel dijumpai.</p>";
-}
+      const list = document.getElementById('article-list');
+      let filtered = articles;
+      if (filter) {
+        filtered = articles.filter(a => 
+          a.title.toLowerCase().includes(filter.toLowerCase()) ||
+          (a.content && a.content.toLowerCase().includes(filter.toLowerCase()))
+        );
+      }
+      list.innerHTML = filtered.map(article => `
+        <div class="article-card">
+          <h2><a href="post.html?id=${encodeURIComponent(article.id)}">${article.title}</a></h2>
+          <div class="meta">${article.date} | ${article.category}</div>
+          <div>${article.content.replace(/<[^>]+>/g, '').substring(0, 100)}...</div>
+        </div>
+      `).join('') || "<p>Tiada artikel dijumpai.</p>";
+    }
 
-renderArticles();
+    renderArticles();
 
-const searchForm = document.getElementById('searchForm');
-const searchInput = document.getElementById('searchInput');
+    const searchForm = document.getElementById('searchForm');
+    const searchInput = document.getElementById('searchInput');
 
-searchForm.addEventListener('submit', e => {
-  e.preventDefault();
-  renderArticles(searchInput.value);
-});
+    searchForm.addEventListener('submit', e => {
+      e.preventDefault();
+      renderArticles(searchInput.value);
+    });
 
-searchInput.addEventListener('input', e => {
-  renderArticles(e.target.value);
-});
+    searchInput.addEventListener('input', e => {
+      renderArticles(e.target.value);
     });
   </script>
-    <nav aria-label="Navigasi utama">
-  <ul class="main-menu">
-    <li><a href="Profil.html">Profil Diri</a></li>
-    <li><a href="index.html">Utama</a></li>
-    <li><a href="services.html">Perkhidmatan</a></li>
-    <li><a href="categories.html">Kategori</a></li>
-    <li><a href="galeri.html">Galeri</a></li>
-    <li><a href="contact.html">Hubungi</a></li>
-  </ul>
-  <img src="gambar_saya.jpg" alt="Gambar Profil" class="profile-img" loading="lazy">
-<script defer src="articles.js"></script>
-</nav>
-<form id="searchForm" class="search-bar" role="search">
-  <label for="searchInput" class="visually-hidden">Cari artikel</label>
-  <input type="text" id="searchInput" placeholder="Cari artikel..." aria-describedby="searchDesc" />
-  <button type="submit" aria-label="Cari">Cari</button>
-  <p id="searchDesc" class="visually-hidden">Taipkan kata kunci untuk mencari artikel di blog ini.</p>
-</form>
 </body>
 </html>
