@@ -1,67 +1,71 @@
 <!DOCTYPE html>
 <html lang="ms">
-<nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Artikel penuh tentang Bahasa Arab Untuk Tujuan Khusus (ASP).">
+  <title>Artikel | Bahasa Arab Untuk Tujuan Khusus</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav aria-label="Navigasi utama">
     <ul class="main-menu">
+      <li><a href="Profil.html">Profil Diri</a></li>
       <li><a href="index.html">Utama</a></li>
       <li><a href="services.html">Perkhidmatan</a></li>
       <li><a href="categories.html">Kategori</a></li>
       <li><a href="galeri.html">Galeri</a></li>
       <li><a href="contact.html">Hubungi</a></li>
     </ul>
-   </nav>
-  <head>
-  <meta charset="UTF-8">
-  <title>Artikel</title>
-</head>
-<body>
-  <div id="article-content"></div>
-  <!-- 1. Muatkan articles.js dahulu -->
-  <script src="articles.js"></script>
-  <!-- 2. Kod JS yang paparkan artikel & insert form komen -->
+    <img src="gambar_saya.jpg" alt="Gambar Profil" class="profile-img" loading="lazy">
+  </nav>
+  <main>
+    <article id="post-content">
+      <h1 id="post-title"></h1>
+      <div class="meta"></div>
+      <div id="post-body"></div>
+    </article>
+  </main>
+  <footer aria-label="Maklumat footer">
+    <div class="footer-content">
+      <p>© 2025 Bahasa Arab Untuk Tujuan Khusus. Hak cipta terpelihara.</p>
+      <div class="social-links">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="social-icon">
+            <path d="M9.19795 21.5H13.198V13.4901H16.8021L17.198 9.50977H13.198V7.5C13.198 6.94772 13.6457 6.5 14.198 6.5H17.198V2.5H14.198C11.4365 2.5 9.19795 4.73858 9.19795 7.5V9.50977H7.19795L6.80206 13.4901H9.19795V21.5Z" fill="currentColor"/>
+          </svg>
+        </a>
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="social-icon">
+            <path d="M14.2581 10.152L22.387 0H20.1716L13.1613 8.93312L7.61475 0H0L8.42912 13.849L0 24H2.31537L9.6645 14.2166L15.3734 24H23L14.2581 10.152ZM10.767 12.8653 9.75737 11.442L3.05287 1.70775H6.51262L11.883 9.76275L12.8926 11.186L19.9079 21.663H16.4481L10.767 12.8653Z" fill="currentColor"/>
+          </svg>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="social-icon">
+            <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="currentColor"/>
+            <path d="M18 0H6C2.68629 0 0 2.68629 0 6V18C0 21.3137 2.68629 24 6 24H18C21.3137 24 24 21.3137 24 18V6C24 2.68629 21.3137 0 18 0ZM12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM18.5 6.5C18.5 7.32843 17.8284 8 17 8C16.1716 8 15.5 7.32843 15.5 6.5C15.5 5.67157 16.1716 5 17 5C17.8284 5 18.5 5.67157 18.5 6.5Z" fill="currentColor"/>
+          </svg>
+        </a>
+      </div>
+      <p>Hubungi kami: <a href="mailto:info@aspblog.com">info@aspblog.com</a> | <a href="tel:+60123456789">+6012-3456789</a></p>
+    </div>
+  </footer>
+  <script defer src="articles.js"></script>
   <script>
-    function getQueryParam(name) {
-      const url = new URL(window.location.href);
-      return url.searchParams.get(name);
+    function displayArticle() {
+      const params = new URLSearchParams(window.location.search);
+      const articleId = params.get('id');
+      const article = articles.find(a => a.id === articleId);
+      if (article) {
+        document.getElementById('post-title').textContent = article.title;
+        document.getElementById('meta').textContent = `${article.date} | ${article.category}`;
+        document.getElementById('post-body').innerHTML = article.content.replace(/\n/g, '<br>');
+      } else {
+        document.getElementById('post-content').innerHTML = '<p>Artikel tidak dijumpai.</p>';
+      }
     }
-    const articleId = getQueryParam('id');
-    const article = articles.find(a => a.id === articleId);
-    if (article) {
-      document.getElementById('article-content').innerHTML = `
-  <h1>${article.title}</h1>
-  <div class="tags"><strong>Tag:</strong> ${article.tags.map(t=>`<span class="tag">${t}</span>`).join(' ')}</div>
-  <div class="meta">${article.date} | ${article.category}</div>
-  ${article.content}
-    <h3>Komen Pembaca</h3>
-    <div id="senarai-komen"></div>
-  <form id="komen-form" onsubmit="submitKomen(event, artikelId)">
-  <label for="nama">Nama:</label>
-  <input type="text" id="nama" placeholder="Nama anda" required>
 
-  <label for="komen">Komen:</label>
-  <textarea id="komen" placeholder="Tulis komen anda di sini" required></textarea>
-
-  <button type="submit">Hantar Komen</button>
-</form>
-       `;
-    } else {
-      document.getElementById('article-content').innerHTML = "<p>Artikel tidak dijumpai.</p>";
-    }
+    displayArticle();
   </script>
-  <!-- 3. Muatkan komen.js SELEPAS form dimasukkan ke dalam halaman -->
-  <script src="komen.js"></script>
-  <script>
-    // Pastikan loadKomen dan event handler dipasang selepas form wujud
-    if (typeof articleId !== "undefined" && document.getElementById('komen-form')) {
-      loadKomen(articleId);
-      document.getElementById('komen-form').onsubmit = function(e) {
-        submitKomen(e, articleId);
-      };
-    }
-  </script>
-
-    <!-- Artikel Seterusnya -->
-  <div class="next-article">
-    <a href="post2.html">Artikel Seterusnya →</a>
-  </div>
 </body>
 </html>
