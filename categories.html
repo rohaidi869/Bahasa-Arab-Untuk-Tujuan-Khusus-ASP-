@@ -20,17 +20,14 @@ async function renderCategories() {
   const articles = await fetch('articles.json').then(res => res.json());
   const categories = [...new Set(articles.map(a => a.category))];
   const categoryList = document.getElementById('category-list');
-  categories.forEach(cat => {
-    const catArticles = articles.filter(a => a.category === cat);
-    categoryList.innerHTML += `
-      <h2>${cat}</h2>
-      ${catArticles.map(a => `
-        <article class="article-card">
-          <h3><a href="post.html?id=${a.id}">${a.title}</a></h3>
-          <div class="meta">${a.date}</div>
-          <p>${a.summary.substring(0, 100)}...</p>
-        </article>
-      `).join('')}
-    `;
-  });
+  categoryList.innerHTML = categories.map(cat => `
+    <h2>${cat}</h2>
+    ${articles.filter(a => a.category === cat).map(a => `
+      <article class="article-card">
+        <h3><a href="post.html?id=${a.id}">${a.title}</a></h3>
+        <div class="meta">${a.date}</div>
+        <p>${a.summary.substring(0, 100)}...</p>
+      </article>
+    `).join('')}
+  `).join('');
 }
