@@ -100,6 +100,7 @@
           .replace(/\n\n/g, '</p><p>')
           .replace(/\n/g, '<br>')
           .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+          .replace(/\[([^\]]*)\]\(([^)]*)\)/g, '<a href="$2">$1</a>')                                                               
           .replace(/\|(.*?)(\n\|-+\|)+([\s\S]*?)(?=\n\n|$)/g, (match, header, _, rows) => {
             const headers = header.split('|').map(h => h.trim()).filter(h => h);
             const rowData = rows.trim().split('\n').map(row => 
