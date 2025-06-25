@@ -311,3 +311,12 @@ footer {
     width: 100%;
   }
 }
+   table {
+       width: 100%; /* Atau lebar yang sesuai */
+       border-collapse: collapse; /* Untuk mengelakkan jarak antara sel */
+   }
+   th, td {
+       padding: 8px; /* Menetapkan padding untuk sel */
+       text-align: left; /* Menetapkan penjajaran teks */
+   }
+  
