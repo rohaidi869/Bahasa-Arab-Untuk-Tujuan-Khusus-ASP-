@@ -5,7 +5,8 @@
   "date": "2025-06-01",
   "category": "Pengajaran",
   "summary": "Pengenalan kepada ASP, pengajaran bahasa Arab untuk konteks khusus seperti akademik dan profesional.",
-  "content": <a href="article1.html" class="back-button">/a>},
+  "content": <a href="article1.html" class="back-button">/a>
+  },
   {
     "id": "2",
     "title": "Sejarah Bahasa Arab Untuk Tujuan Khusus",
