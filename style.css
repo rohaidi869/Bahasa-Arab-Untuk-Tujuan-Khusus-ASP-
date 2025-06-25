@@ -363,3 +363,44 @@ main {
 #post-body th {
   background-color: #f8f8f8;
 }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+main {
+  flex: 1;
+}
+
+.sidebar {
+  width: 250px;
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.article-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.social-links a {
+  margin-right: 10px;
+}
