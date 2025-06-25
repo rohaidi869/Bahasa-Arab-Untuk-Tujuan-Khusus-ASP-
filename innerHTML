@@ -1,0 +1,42 @@
+async function renderArticles(filter = "") {
+  const loading = document.getElementById('loading');
+  const articleList = document.getElementById('article-list');
+  loading.style.display = 'block';
+  articleList.style.display = 'none';
+  
+  try {
+    const cachedArticles = localStorage.getItem('articles');
+    let articles;
+    if (cachedArticles) {
+      articles = JSON.parse(cachedArticles);
+    } else {
+      const response = await fetch('articles.json');
+      if (!response.ok) throw new Error(`Gagal memuatkan articles.json: ${response.status}`);
+      articles = await response.json();
+      localStorage.setItem('articles', JSON.stringify(articles));
+    }
+    
+    let filtered = articles;
+    if (filter) {
+      filtered = articles.filter(a => 
+        a.title.toLowerCase().includes(filter.toLowerCase()) ||
+        (a.summary && a.summary.toLowerCase().includes(filter.toLowerCase()))
+      );
+    }
+    
+    articleList.innerHTML = filtered.map(article => `
+      <article class="article-card">
+        <h2><a href="post.html?id=${encodeURIComponent(article.id)}">${article.title}</a></h2>
+        <div class="meta">${article.date} | ${article.category}</div>
+        <div class="content">${article.content}</div> <!-- Gunakan innerHTML di sini -->
+      </article>
+    `).join('') || "<p>Tiada artikel dijumpai.</p>";
+    
+  } catch (error) {
+    console.error('Ralat memuatkan artikel:', error.message);
+    articleList.innerHTML = "<p>Gagal memuatkan artikel. Sila cuba lagi kemudian.</p>";
+  } finally {
+    loading.style.display = 'none';
+    articleList.style.display = 'block';
+  }
+}
