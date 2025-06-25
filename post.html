@@ -97,36 +97,17 @@
         document.getElementById('post-meta').textContent = `${article.date} | ${article.category}`;
         
         // Memproses dan memaparkan kandungan artikel
-        document.getElementById('post-body').innerHTML = DOMPurify.sanitize(article.content
-          .replace(/\n\n/g, '</p><p>') // Tukar dua baris baru kepada <p>
-          .replace(/\n/g, '<br>') // Tukar satu baris baru kepada <br>
-          .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // Tukar **teks** kepada <strong>
-          .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>') // Tukar [teks](url) kepada <a>
-          .replace(/## (.*?)(\n|$)/g, '<h2>$1</h2>') // Tukar ## tajuk kepada <h2>
-          .replace(/\|([^\n]+)\|/g, (match, header) => {
-            const headers = header.split('|').map(h => h.trim()).filter(h => h);
-            return `<table border="1"><thead><tr>${headers.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>`;
-          })
-          .replace(/^\|([^\n]+)\|/gm, (match, rows) => {
-            const rowData = rows.split('\n').map(row => 
-              row.split('|').map(cell => cell.trim()).filter(cell => cell)
-            );
-            return `${rowData.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
-          })
-        );
-        loadKomen(articleId);
-        const komenForm = document.getElementById('komen-form');
-        komenForm.addEventListener('submit', (e) => submitKomen(e, articleId));
-      } catch (error) {
-        console.error('Ralat memaparkan artikel:', error.message);
-        content.innerHTML = `<p>Artikel tidak dijumpai: ${error.message}</p>`;
-      } finally {
-        loading.style.display = 'none';
-        content.style.display = 'block';
-      }
-    }
-
-    displayArticle();
+    <body>
+       <h1>Blog Saya</h1>
+       <h2>Senarai Artikel</h2>
+       <ul>
+           <li><a href="article.html">Bahasa Arab Untuk Tujuan Khusus (ASP)</a></li>
+           <!-- Tambah pautan ke artikel lain di sini -->
+       </ul>
+   </body>
+   </html>
+   
+  displayArticle();
   </script>
 </body>
 </html>
