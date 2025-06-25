@@ -14,8 +14,7 @@
   <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script src="analytics.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
-   </head>
+</head>
 <body>
   <nav aria-label="Navigasi utama">
     <ul class="main-menu">
@@ -99,20 +98,23 @@
         
         // Memproses dan memaparkan kandungan artikel
         document.getElementById('post-body').innerHTML = DOMPurify.sanitize(article.content
-  .replace(/\n\n/g, '</p><p>') // Tukar dua baris baru kepada <p>
-  .replace(/\n/g, '<br>') // Tukar satu baris baru kepada <br>
-  .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // Tukar **teks** kepada <strong>
-  .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>') // Tukar [teks](url) kepada <a>
-  .replace(/## (.*?)(\n|$)/g, '<h2>$1</h2>') // Tukar ## tajuk kepada <h2>
-  .replace(/\|(.*?)(\n\|-+\|)+([\s\S]*?)(?=\n\n|$)/g, (match, header, _, rows) => {
-    const headers = header.split('|').map(h => h.trim()).filter(h => h);
-    const rowData = rows.trim().split('\n').map(row => 
-      row.split('|').map(cell => cell.trim()).filter(cell => cell)
-    );
-    return `<table border="1"><thead><tr>${headers.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${rowData.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
-  })
-);
-     loadKomen(articleId);
+          .replace(/\n\n/g, '</p><p>') // Tukar dua baris baru kepada <p>
+          .replace(/\n/g, '<br>') // Tukar satu baris baru kepada <br>
+          .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // Tukar **teks** kepada <strong>
+          .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>') // Tukar [teks](url) kepada <a>
+          .replace(/## (.*?)(\n|$)/g, '<h2>$1</h2>') // Tukar ## tajuk kepada <h2>
+          .replace(/\|([^\n]+)\|/g, (match, header) => {
+            const headers = header.split('|').map(h => h.trim()).filter(h => h);
+            return `<table border="1"><thead><tr>${headers.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>`;
+          })
+          .replace(/^\|([^\n]+)\|/gm, (match, rows) => {
+            const rowData = rows.split('\n').map(row => 
+              row.split('|').map(cell => cell.trim()).filter(cell => cell)
+            );
+            return `${rowData.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+          })
+        );
+        loadKomen(articleId);
         const komenForm = document.getElementById('komen-form');
         komenForm.addEventListener('submit', (e) => submitKomen(e, articleId));
       } catch (error) {
