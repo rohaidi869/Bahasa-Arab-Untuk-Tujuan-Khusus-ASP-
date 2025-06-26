@@ -97,7 +97,7 @@
         document.getElementById('post-meta').textContent = `${article.date} | ${article.category}`;
         
         // Memproses dan memaparkan kandungan artikel
-            // Memproses dan memaparkan kandungan artikel
+        console.log(article.content);
         document.getElementById('post-body').innerHTML = DOMPurify.sanitize(article.content
           .replace(/\n\n/g, '</p><p>') // Tukar dua baris baru kepada <p>
           .replace(/\n/g, '<br>') // Tukar satu baris baru kepada <br>
