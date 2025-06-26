@@ -4,7 +4,7 @@ const articles = [
        "title": "Bahasa Arab Untuk Tujuan Khusus: Satu Pengenalan",
        "date": "2025-06-01",
        "category": "Pengajaran",
-       "summary": "Pengenalan kepada ASP, pengajaran bahasa Arab untuk konteks khusus seperti akademik dan profesional.",
+       "summary": "Pengenalan kepada *ASP*, pengajaran bahasa Arab untuk konteks khusus seperti akademik dan profesional.",
   },
   {
     "id": "2",
