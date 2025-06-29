@@ -98,15 +98,14 @@
         
         // Memproses dan memaparkan kandungan artikel
         console.log(article.content);
-        document.getElementById('post-body').innerHTML = DOMPurify.sanitize(article.content
-          .replace(/\n\n/g, '</p><p>') // Tukar dua baris baru kepada <p>
-          .replace(/\n/g, '<br>') // Tukar satu baris baru kepada <br>
-          .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // Tukar **teks** kepada <strong>
-          .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>') // Tukar [teks](url) kepada <a>
-          .replace(/## (.*?)(\n|$)/g, '<h2>$1</h2>') // Tukar ## tajuk kepada <h2>
-        console.log('Output HTML:', hasilAkhir); 
-      
-        );
+        document.getElementById('post-body').innerHTML = DOMPurify.sanitize(
+  article.content
+    .replace(/\n\n/g, '</p><p>')
+    .replace(/\n/g, '<br>')
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
+    .replace(/## (.*?)(\n|$)/g, '<h2>$1</h2>')
+);
         loadKomen(articleId);
         const komenForm = document.getElementById('komen-form');
         komenForm.addEventListener('submit', (e) => submitKomen(e, articleId));
